@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>크라켄즈 야구팀</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-overlay">
+      <img src="krakens_logo_official.png" alt="크라켄즈 로고" class="logo">
+      <h1>MBO 리그 크라켄즈</h1>
+      <nav>
+        <button onclick="showSection('intro')">팀 소개</button>
+        <button onclick="showSection('schedule')">경기 일정</button>
+        <button onclick="showSection('training')">훈련 일정</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="intro" class="content-section">
+      <h2>팀 소개</h2>
+      <p>크라켄즈는 바다의 전설적인 괴물처럼 강력한 팀을 지향하는 MBO 리그의 대표적인 야구팀입니다.</p>
+    </section>
+
+    <section id="schedule" class="content-section" style="display: none;">
+      <h2>경기 일정</h2>
+      <ul>
+        <li>5월 15일 vs 드래곤즈</li>
+        <li>5월 22일 vs 타이탄즈</li>
+      </ul>
+    </section>
+
+    <section id="training" class="content-section" style="display: none;">
+      <h2>훈련 일정</h2>
+      <ul>
+        <li>5월 13일 오후 2시 ~ 오후 5시</li>
+        <li>5월 20일 오전 10시 ~ 오후 1시</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.content-section').forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>

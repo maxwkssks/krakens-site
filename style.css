@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #001a26;
+  color: #f0f0f0;
+}
+
+header {
+  background-image: url('krakens_stadium_header.png');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
+}
+
+.header-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 90px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #fdd76e;
+  margin: 0;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav button {
+  position: relative;
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #fdd76e;
+  font-weight: bold;
+  border: 2px solid #fdd76e;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+nav button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background-color: #fdd76e;
+  z-index: -1;
+  transition: height 0.3s ease;
+  border-radius: 5px;
+}
+
+nav button:hover::before {
+  height: 100%;
+}
+
+nav button:hover {
+  color: #000;
+}
+
+main {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.content-section {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #013847;
+  padding: 20px;
+  border-radius: 8px;
+}
